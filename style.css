@@ -1,0 +1,119 @@
+.map-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40%;
+    width: 60%;
+}
+
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 60%;
+    width: 40%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+.intro{
+    overflow-wrap: break-word;
+}
+
+.slider_section {
+    left:35px;
+    background: lightblue;
+    padding: 5px;
+    border-radius: 20px;
+    width: 450px;
+    height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.magnitude_update{
+    background-color: rgb(20, 206, 213);
+    width: 450px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.legend {
+    position: absolute;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.7);
+    bottom: 0;
+    right: 0;
+    margin: 0 10px 30px 0; /*top margin, right margin, bottom margin, left margin*/
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.legend h4 {
+    margin: 0 0 10px;
+}
+
+.legend div {
+    margin-bottom: 5px;
+}
+
+.legend span {
+    display: inline-block;
+    border-radius: 50%; 
+    height: 10px; 
+    width: 10px;
+    margin-right: 5px; 
+}
+
+/* Add colour to each child div in legend */
+.legend div:nth-child(2) span {
+    background-color: #fee5d9; 
+}
+
+.legend div:nth-child(3) span {
+    background-color: #FFC2C2;
+}
+
+.legend div:nth-child(4) span {
+    background-color: #FFA6A6;
+}
+
+.legend div:nth-child(5) span {
+    background-color: #FF8A8A;
+}
+
+.legend div:nth-child(6) span {
+    background-color: #FC6060;
+}
+
+.legend div:nth-child(7) span {
+    background-color: #FA3434;
+}
+
+.legend div:nth-child(8) span {
+    background-color: #FC0808;
+}
+
+.return_button{
+    position: absolute;
+    z-index: 9999;
+    top: 10px;
+    right: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100px;
+    height: 40px;
+    color: white;
+    border: none;
+    background-color: rgb(0, 208, 255);
+    border-radius: 20%; 
+}
+
+.return_button:hover {
+    transform: scale(1.25);
+}

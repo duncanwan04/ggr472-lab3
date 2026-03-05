@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.18.1/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script 
+        src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.1.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" 
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.1.0/mapbox-gl-geocoder.css" 
+        type="text/css">
+</head>
+
+<body>
+    <div id="sidebar" class="sidebar">
+
+        <div id="intro" class="intro">
+            <h1> Earthquakes in the past week <br> (Feb 25 - Mar 4)</h1>
+            <h2> Map only shows recent earthquakes on the American west coast </h2>
+        </div>
+        
+        <div id="slider_section" class="slider_section">
+            <h2>Filter for earthquakes by magnitude!</h2>
+            <label for="slider">Earthquakes with Magnitude ></label>
+            <input id="slider_input" type="number" min="0" max="6" step="0.1" value="0">
+            <input id="slider" type="range" min="0" max="6" step="0.1" value="0">
+        </div>
+
+        <div id="magnitude_update" class="magnitude_update">
+            <h2>Magnitude (hover): </h2>
+        </div>
+
+        <div id="data_source" class="data_source">
+            <h3> Data Source: US Geological Survey (USGS)</h3>
+            <p>USGS has prepared the data in a GeoJSON Summary Format</p>
+            <p>All Earthquakes in the past 7 days are used</p>
+                <a target="_blank" href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php">
+                    <button id="USGS_data">USGS Summary Format Website</button>
+                </a>
+        </div>
+
+    </div>
+
+</body>
+
+<div id="legend" class="legend">
+        <h4>Earthquake Magniutde</h4>
+        <div><span></span>0-0.5</div>
+        <div><span></span>0.5-1.0</div>
+        <div><span></span>1.0.1.5</div>
+        <div><span></span>1.5-2.0</div>
+        <div><span></span>2.0.2.5</div>
+        <div><span></span>2.5-3.0</div>
+        <div><span></span>>3.0</div>
+</div>
+
+<div id="map_geocoder" class="map_geocoder"></div>
+
+<button id="return_button" class="return_button">Return</button>
+
+<div id="my-map" class="map-container"></div>
+<script src="script.js"></script>
+
+</html>
