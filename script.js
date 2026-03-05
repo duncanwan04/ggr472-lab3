@@ -65,6 +65,8 @@ const slider = document.getElementById("slider");
 const slider_input = document.getElementById("slider_input");
 
 /// event listener, every time the input changes, this thing runs
+/// updates the slider to match input value, and the same the other way
+
 slider_input.addEventListener('input', () =>{
     slider.value = slider_input.value
 })
@@ -100,8 +102,8 @@ function data_filter(){
 slider.addEventListener('input', () => {
     data_filter();
 });
-/// updates the slider to match input value, and the same the other way
 
+/// applies datafilter function to get only those points with big enough earthquakes
 
 /*--------------------------------------------------------------------
 ADD POP-UP
